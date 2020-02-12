@@ -1,0 +1,449 @@
+[
+  {
+    "properties": [
+
+    ],
+    "area": [
+      {
+        "similarity": 100,
+        "h": 59,
+        "y": 0,
+        "x": 0,
+        "result": "ok",
+        "w": "128"
+      }
+    ],
+    "json": "tests/opensuse/products/opensuse/needles/text-login-20160812.json",
+    "tags": [
+      "text-logged-in-root",
+      "text-login",
+      "tty2-selected"
+    ],
+    "result": "ok",
+    "screenshot": "zypper_up-1.png",
+    "needle": "text-login-20160812",
+    "needles": [
+      {
+        "name": "text-login-20130711",
+        "error": 0.0066291280979017,
+        "json": "tests/opensuse/products/opensuse/needles/text-login-20130711.json",
+        "area": [
+          {
+            "x": 0,
+            "y": 0,
+            "result": "fail",
+            "w": "128",
+            "similarity": 91,
+            "h": 66
+          }
+        ]
+      },
+      {
+        "area": [
+          {
+            "x": 526,
+            "y": 12,
+            "w": "51",
+            "result": "ok",
+            "similarity": 100,
+            "h": 23
+          },
+          {
+            "w": "83",
+            "result": "fail",
+            "y": 9,
+            "x": 2,
+            "h": 26,
+            "similarity": 71
+          }
+        ],
+        "name": "tty2-selected-20151130",
+        "error": 0.0397457427478919,
+        "json": "tests/opensuse/products/opensuse/needles/tty2-selected-20151130.json"
+      },
+      {
+        "area": [
+          {
+            "y": 64,
+            "x": 26,
+            "w": "21",
+            "result": "fail",
+            "similarity": 2,
+            "h": 166
+          }
+        ],
+        "error": 0.949719902558947,
+        "name": "text-logged-in-root-20161114",
+        "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-20161114.json"
+      },
+      {
+        "area": [
+          {
+            "y": 91,
+            "x": 123,
+            "w": "34",
+            "result": "fail",
+            "similarity": 0,
+            "h": 11
+          }
+        ],
+        "error": 1,
+        "name": "text-logged-in-root-20151205",
+        "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-20151205.json"
+      },
+      {
+        "area": [
+          {
+            "h": 11,
+            "similarity": 0,
+            "result": "fail",
+            "w": "34",
+            "x": 123,
+            "y": 91
+          }
+        ],
+        "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-otherfont-20151212.json",
+        "name": "text-logged-in-root-otherfont-20151212",
+        "error": 1
+      },
+      {
+        "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-simple_prompt-20161025.json",
+        "name": "text-logged-in-root-simple_prompt-20161025",
+        "error": 1,
+        "area": [
+          {
+            "similarity": 0,
+            "h": 90,
+            "y": 81,
+            "x": 24,
+            "result": "fail",
+            "w": "24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "properties": [
+
+    ],
+    "area": [
+      {
+        "y": 96,
+        "x": 0,
+        "result": "ok",
+        "w": "98",
+        "similarity": 100,
+        "h": 18
+      }
+    ],
+    "tags": [
+      "password-prompt"
+    ],
+    "json": "tests/opensuse/products/opensuse/needles/password-prompt-20160812.json",
+    "result": "ok",
+    "screenshot": "zypper_up-2.png",
+    "needle": "password-prompt-20160812",
+    "needles": [
+      {
+        "area": [
+          {
+            "x": 0,
+            "y": 96,
+            "w": "98",
+            "result": "fail",
+            "similarity": 86,
+            "h": 18
+          }
+        ],
+        "json": "tests/opensuse/products/opensuse/needles/password-prompt-20141126.json",
+        "name": "password-prompt-20141126",
+        "error": 0.0189255367517618
+      },
+      {
+        "error": 0.0347768866323104,
+        "name": "password-prompt-20141207",
+        "json": "tests/opensuse/products/opensuse/needles/password-prompt-20141207.json",
+        "area": [
+          {
+            "result": "fail",
+            "w": "73",
+            "y": 96,
+            "x": 0,
+            "h": 18,
+            "similarity": 81
+          }
+        ]
+      },
+      {
+        "area": [
+          {
+            "result": "fail",
+            "w": "98",
+            "y": 754,
+            "x": 0,
+            "h": 14,
+            "similarity": 0
+          }
+        ],
+        "error": 1,
+        "name": "password-prompt-20160813",
+        "json": "tests/opensuse/products/opensuse/needles/password-prompt-20160813.json"
+      },
+      {
+        "area": [
+          {
+            "similarity": 0,
+            "h": 16,
+            "y": 13,
+            "x": 89,
+            "w": "96",
+            "result": "fail"
+          }
+        ],
+        "name": "password-prompt-in-xterm-20150915",
+        "error": 1,
+        "json": "tests/opensuse/products/opensuse/needles/password-prompt-in-xterm-20150915.json"
+      },
+      {
+        "json": "tests/opensuse/products/opensuse/needles/sshfs-20150930.json",
+        "name": "sshfs-20150930",
+        "error": 1,
+        "area": [
+          {
+            "similarity": 0,
+            "h": 16,
+            "y": 752,
+            "x": 2,
+            "result": "fail",
+            "w": "86"
+          }
+        ]
+      },
+      {
+        "error": 1,
+        "name": "sshfs-20161110",
+        "json": "tests/opensuse/products/opensuse/needles/sshfs-20161110.json",
+        "area": [
+          {
+            "x": 0,
+            "y": 373,
+            "w": "69",
+            "result": "fail",
+            "similarity": 0,
+            "h": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "needles": [
+      {
+        "area": [
+          {
+            "similarity": 86,
+            "h": 11,
+            "y": 130,
+            "x": 82,
+            "w": "34",
+            "result": "fail"
+          }
+        ],
+        "name": "text-logged-in-root-otherfont-20151212",
+        "error": 0.0182892699026102,
+        "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-otherfont-20151212.json"
+      },
+      {
+        "error": 0.884333095463371,
+        "name": "text-logged-in-root-simple_prompt-20161025",
+        "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-simple_prompt-20161025.json",
+        "area": [
+          {
+            "y": 129,
+            "x": 69,
+            "w": "24",
+            "result": "fail",
+            "similarity": 5,
+            "h": 90
+          }
+        ]
+      },
+      {
+        "error": 1,
+        "name": "text-logged-in-root-20161114",
+        "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-20161114.json",
+        "area": [
+          {
+            "h": 166,
+            "similarity": 0,
+            "w": "21",
+            "result": "fail",
+            "x": 69,
+            "y": 63
+          }
+        ]
+      }
+    ],
+    "needle": "text-logged-in-root-20151205",
+    "screenshot": "zypper_up-3.png",
+    "result": "ok",
+    "json": "tests/opensuse/products/opensuse/needles/text-logged-in-root-20151205.json",
+    "tags": [
+      "text-logged-in-root"
+    ],
+    "area": [
+      {
+        "similarity": 100,
+        "h": 11,
+        "x": 82,
+        "y": 130,
+        "result": "ok",
+        "w": "34"
+      }
+    ],
+    "properties": [
+
+    ]
+  },
+  {
+    "result": "unk",
+    "screenshot": "zypper_up-5.png",
+    "needles": [
+
+    ]
+  },
+  {
+    "result": "ok",
+    "title": "wait_serial",
+    "text": "zypper_up-6.txt",
+    "needles": [
+
+    ]
+  },
+  {
+    "needles": [
+
+    ],
+    "screenshot": "zypper_up-8.png",
+    "result": "unk"
+  },
+  {
+    "needles": [
+
+    ],
+    "title": "wait_serial",
+    "result": "ok",
+    "text": "zypper_up-9.txt"
+  },
+  {
+    "needles": [
+
+    ],
+    "screenshot": "zypper_up-11.png",
+    "result": "unk"
+  },
+  {
+    "title": "wait_serial",
+    "result": "ok",
+    "text": "zypper_up-12.txt",
+    "needles": [
+
+    ]
+  },
+  {
+    "needles": [
+
+    ],
+    "screenshot": "zypper_up-14.png",
+    "result": "unk"
+  },
+  {
+    "needles": [
+
+    ],
+    "title": "wait_serial",
+    "result": "ok",
+    "text": "zypper_up-15.txt"
+  },
+  {
+    "needles": [
+
+    ],
+    "screenshot": "zypper_up-17.png",
+    "result": "unk"
+  },
+  {
+    "text": "zypper_up-18.txt",
+    "title": "wait_serial",
+    "result": "ok",
+    "needles": [
+
+    ]
+  },
+  {
+    "screenshot": "zypper_up-20.png",
+    "result": "unk",
+    "needles": [
+
+    ]
+  },
+  {
+    "title": "wait_serial",
+    "result": "ok",
+    "text": "zypper_up-21.txt",
+    "needles": [
+
+    ]
+  },
+  {
+    "result": "ok",
+    "screenshot": "zypper_up-22.png",
+    "needle": "cleared-console-20141130",
+    "needles": [
+
+    ],
+    "properties": [
+
+    ],
+    "area": [
+      {
+        "w": "1023",
+        "result": "ok",
+        "x": 0,
+        "y": 1,
+        "h": 766,
+        "similarity": 100
+      }
+    ],
+    "json": "tests/opensuse/products/opensuse/needles/cleared-console-20141130.json",
+    "tags": [
+      "cleared-console"
+    ]
+  },
+  {
+    "result": "ok",
+    "screenshot": "zypper_up-22.png",
+    "needle": "cleared-console-20141130",
+    "needles": [
+
+    ],
+    "properties": [
+
+    ],
+    "area": [
+      {
+        "w": "1023",
+        "result": "ok",
+        "x": 0,
+        "y": 1,
+        "h": 766,
+        "similarity": 100
+      }
+    ],
+    "json": "tests/opensuse/products/opensuse/needles/cleared-console-20141130.json",
+    "tags": [
+      "cleared-console"
+    ]
+  }
+]

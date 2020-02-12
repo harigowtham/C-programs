@@ -1,0 +1,87 @@
+
+// A utility function to swap two elements
+void swap(int* a, int* b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+
+/* This function takes last element as pivot, places
+   the pivot element at its correct position in sorted
+    array, and places all smaller (smaller than pivot)
+   to left of pivot and all greater elements to right
+   of pivot */
+int partition (int arr[], int low, int high)
+{
+    int pivot = arr[high];    // pivot
+    int i = (low - 1);  // Index of smaller element
+
+    for (int j = low; j <= high- 1; j++)
+    {
+        // If current element is smaller than or
+        // equal to pivot
+        if (arr[j] <= pivot)
+        {
+            i++;    // increment index of smaller element
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    swap(&arr[i + 1], &arr[high]);
+    return (i + 1);
+}
+
+/* The main function that implements QuickSort
+ arr[] --> Array to be sorted,
+  low  --> Starting index,
+  high  --> Ending index */
+void quickSort(int arr[], int low, int high)
+{
+    if (low < high)
+    {
+        /* pi is partitioning index, arr[p] is now
+           at right place */
+        int pi = partition(arr, low, high);
+
+        // Separately sort elements before
+        // partition and after partition
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+/* Function to print an array */
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i=0; i < size; i++)
+        printf("%d ", arr[i]);
+    printf("n");
+}
+
+// Complete the droppedRequests function below.
+int droppedRequests(int requestTime_count, int* requestTime) {
+    int txn, i, j, last_req;
+    int sec_1,sec_10, sec_60;
+    quickSort(requestTime, 0, requestTime_count-1);
+    last_req = requestTime[0];
+    while (i< requestTime_count) {
+        //q = requestTime[i];
+        //per sec:
+        while (last_req == requestTime[j]) {
+            j++;
+            k++;
+            l++;
+            if (j < 3) {
+                sec_1++;
+            }
+        }
+        j = 0;
+        while (per_10sec == requestTime[k]) {
+            k++;
+        }
+        i = j;
+
+    }
+
+}
