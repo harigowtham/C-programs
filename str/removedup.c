@@ -24,9 +24,11 @@ void remove_dup(char s[], int n) {
         int j = 0;
         int arr[30];
         memset(arr, 0, 30*(sizeof(arr[0])));
+        /*
         for(int k = 0;k <30; k++){
                 printf("%d", arr[k]);
         }
+        */
         while (s[i] != '\0') {
                  if (arr[CHAR2IDX(s[i])] == 0 && s[i] != '\0') {
                          s[j] = s[i];

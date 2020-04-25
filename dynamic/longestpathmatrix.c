@@ -70,6 +70,14 @@ int finLongestOverAll(int mat[n][n])
 		}
 	}
 
+            printf("output matrix with length that can be travelled from that particular cell\n");
+    for (int i = 0; i < n; ++i) {
+        for(int j = 0; j < n; ++j)
+        {
+            printf("%d\t", dp[i][j]);
+        }
+            printf("\n");
+    }
 	return result;
 }
 

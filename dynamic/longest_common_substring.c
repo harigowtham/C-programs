@@ -5,9 +5,9 @@ int lcs(char s1[],char s2[],int n,int m) {
         int k[n+1][m+1];
         for (int i = 0; i <= n; i++) {
                 for (int j = 0; j <= m; j++) {
-                        if (i ==0 |j == 0)
+                        if (i ==0 || j == 0)
                                 k[i][j] = 0;
-                        if (s1[i-1] == s2[j-1]) {
+                        else if (s1[i-1] == s2[j-1]) {
                                 k[i][j] = k[i-1][j-1] + 1;
                                 result = (k[i][j] > result)? k[i][j]:result;
                         }
@@ -15,23 +15,22 @@ int lcs(char s1[],char s2[],int n,int m) {
                                 k[i][j] = 0;
                 }
         }
-        /* to understand the matrix
-    for (int i = 0; i < n; ++i) {
-        for(int j = 0; j < m; ++j)
+    for (int i = 0; i <= n; ++i) {
+        for(int j = 0; j <= m; ++j)
         {
             printf("%d\t", k[i][j]);
         }
             printf("\n");
     }
-    */
         return result;
 }
 
 int main() {
         char s1[] = "geeksforgeeks";
-        char s2[] = "geeksquiz";
-        char n = sizeof(s1)/sizeof(s1[0]);
-        char m = sizeof(s2)/sizeof(s2[0]);
+        //char s2[] = "g"; //1
+        char s2[] = "geeksquiz"; //5
+        int n = sizeof(s1)/sizeof(s1[0]);
+        int m = sizeof(s2)/sizeof(s2[0]);
         printf("%d", lcs(s1, s2, n, m));
         return 1;
 }

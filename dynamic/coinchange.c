@@ -1,3 +1,6 @@
+//In the steps problem, the order matters: (1,2) is not the same as (2,1). With the coin problem, only the number of each type of coin used matters.
+
+/*
 // Recursive C program for
 // coin change problem.
 #include<stdio.h>
@@ -37,7 +40,8 @@ int main()
 	//getchar();
 	return 0;
 }
-/*
+
+*/
 // Dynamic programming:
 
 // C program for coin change problem.
@@ -72,6 +76,13 @@ int count( int S[], int m, int n )
 			table[i][j] = x + y;
 		}
 	}
+    for (int i = 0; i < n+1; ++i) {
+        for(int j = 0; j < m; ++j)
+        {
+            printf("%d\t", table[i][j]);
+        }
+            printf("\n");
+    }
 	return table[n][m-1];
 }
 
@@ -87,7 +98,7 @@ int main()
 
 //above is O(mn)
 //reducing it to O(n)
-
+/*
 int count( int S[], int m, int n )
 {
 	// table[i] will be storing the number of solutions for

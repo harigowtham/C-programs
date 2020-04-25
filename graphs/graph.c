@@ -59,7 +59,7 @@ struct Graph* createGraph(int vertices)
 
     return graph;
 }
-
+//mulitple instance of  src or dest might be created based on the linking
 void addEdge(struct Graph* graph, int src, int dest)
 {
     // Add edge from src to dest

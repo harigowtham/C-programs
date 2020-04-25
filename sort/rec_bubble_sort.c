@@ -1,4 +1,5 @@
 /* C program for recursive implementation of Bubble sort */
+//check normal bubble sort and come to this for better understanding
 #include <stdio.h>
 
 

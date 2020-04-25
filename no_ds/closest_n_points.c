@@ -36,7 +36,7 @@ int main() {
     int number_of_elements;
     int iter, element;
     Init();
-    int
+    //int
     for (iter = 0; iter < number_of_elements; iter++) {
         scanf("%d", &element);
         Insert(element);

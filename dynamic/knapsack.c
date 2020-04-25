@@ -28,9 +28,10 @@ for (i = 0; i <= n; i++)
 			K[i][w] = 0;
                 //only after the weight of the ith item is hit, we perform calculation to see the max.
                 else if (wt[i-1] <= w)
-                        //            val [i-1 ]val is the only thing added (item of that row).
-                        //                       k[i-1][w-wt[i-1]]value for the weight of the previous element (got by perfoming the below step.
-                        //                                          k [i-1][w] value for the current element)
+                        //            val[i-1] is the value of the item being added(item of that row).
+                        //                       k[i-1][w-wt[i-1]]value of with the weight of that item removed . Only previous element is there (got by perfoming the below step.
+                        //                       this means value of the row added with the value of the previous item.(to get previous item, subtract the weight of the current item from the above row.(use above row because this row is manipulated.)
+                        //                                          k [i-1][w] value of the previous item)
                         K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]], K[i-1][w]);
                 else
                         // to get the value for the previous element, we pull down the value if there is an value above it.

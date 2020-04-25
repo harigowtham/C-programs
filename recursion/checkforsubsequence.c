@@ -1,11 +1,11 @@
 // Iterative C++ program to check if a string is subsequence of another string
-#include<iostream>
-#include<cstring>
-using namespace std;
+#include<stdio.h>
+#include<string.h>
+//using namespace std;
 
 // Returns true if str1[] is a subsequence of str2[]. m is
 // length of str1 and n is length of str2
-bool isSubSequence(char str1[], char str2[], int m, int n)
+int isSubSequence(char str1[], char str2[], int m, int n)
 {
 int j = 0; // For index of str1 (or subsequence
 
@@ -27,7 +27,7 @@ int main()
 	char str2[] = "geeksforgeeks";
 	int m = strlen(str1);
 	int n = strlen(str2);
-	isSubSequence(str1, str2, m, n)? cout << "Yes ": out << "No";
+	isSubSequence(str1, str2, m, n)? printf("Yes"): printf("No");
 	return 0;
 }
 

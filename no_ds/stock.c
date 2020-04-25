@@ -82,3 +82,35 @@ int main()
 
     return 0;
 }
+
+/*
+ * calculate the max profit in unlimited buys and sells
+ *
+int maxProfit(int* price, int n){
+    int max = 0;
+    int i = 0;
+    int buy = 0;
+    int sell = 0;
+    while (i < n) {
+        while((i < n-1) && (price[i] >= price[i+1])) {
+            i++;
+        }
+        if (i == n-1)
+            break;
+        buy = price[i];
+        printf("buy:%d\n", buy);
+        i++;
+        while((i < n) && (price[i] <= price[i-1])) {
+            i++;
+        }
+        sell = price[i++];
+        printf("sell:%d\n", sell);
+        max = (sell-buy) + max;
+        printf("profit:%d\n", max);
+
+    }
+
+    return max;
+}
+
+*/

@@ -32,6 +32,7 @@ void enQueue(int element)
     if(isFull()) printf("\n Queue is full!! \n");
     else
     {
+        // if this is the first insert make front 0
         if(front == -1) front = 0;
         rear = (rear + 1) % SIZE;
         items[rear] = element;

@@ -40,8 +40,10 @@ void merge(int arr[], int l, int m, int r)
         k++;
     }
 
-    /* Copy the remaining elements of L[], if there
-       are any */
+    //in the above the i or j value could have alone crossed and the loop will stop
+    // so we need to manually check the rest and copy
+    // Copy the remaining elements of L[], if there
+    //   are any
     while (i < n1)
     {
         arr[k] = L[i];
@@ -49,8 +51,8 @@ void merge(int arr[], int l, int m, int r)
         k++;
     }
 
-    /* Copy the remaining elements of R[], if there
-       are any */
+    // Copy the remaining elements of R[], if there
+    //  are any
     while (j < n2)
     {
         arr[k] = R[j];

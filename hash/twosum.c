@@ -1,4 +1,6 @@
-// C program to insert a node in AVL tree
+// C program to find if a target exists
+// target is the sum of two number in the array
+// and efficient soln is in arrays dir
 #include<stdio.h>
 #include<stdlib.h>
     int arr[3];

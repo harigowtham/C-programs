@@ -1,7 +1,7 @@
 // C++ program to count number of strings
 // of n characters with
-#include<bits/stdc++.h>
-using namespace std;
+#include<stdio.h>
+//using namespace std;
 
 // n is total number of characters.
 // bCount and cCount are counts of 'b'
@@ -26,7 +26,7 @@ int countStr(int n, int bCount, int cCount)
 int main()
 {
 	int n = 3; // Total number of characters
-	cout << countStr(n, 1, 2);
+	printf("%d", countStr(n, 1, 2));
 	return 0;
 }
 
