@@ -30,8 +30,8 @@ for (i = 0; i <= n; i++)
                 else if (wt[i-1] <= w)
                         //            val[i-1] is the value of the item being added(item of that row).
                         //                       k[i-1][w-wt[i-1]]value of with the weight of that item removed . Only previous element is there (got by perfoming the below step.
-                        //                       this means value of the row added with the value of the previous item.(to get previous item, subtract the weight of the current item from the above row.(use above row because this row is manipulated.)
-                        //                                          k [i-1][w] value of the previous item)
+                        //                       this means value of the row added with the value of the previous item. To get previous item, subtract the weight of the current item from the above row.(use above row because this row is manipulated.)
+                        //                                          k [i-1][w] value until the previous item.(got from above)
                         K[i][w] = max(val[i-1] + K[i-1][w-wt[i-1]], K[i-1][w]);
                 else
                         // to get the value for the previous element, we pull down the value if there is an value above it.

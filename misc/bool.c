@@ -8,5 +8,5 @@ int check() {
 void main () {
         bool i;
         i = check();
-        printf("%d", i);
+        printf("%d", i); //0
 }

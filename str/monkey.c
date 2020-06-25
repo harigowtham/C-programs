@@ -1,4 +1,4 @@
-/* minimum number of space necessary is to be calculate. that part major is yet to be done
+// minimum number of space necessary is to be calculate. that part major is yet to be done
 
 #include<stdio.h>
 #include<string.h>
@@ -37,7 +37,7 @@ int check(char str[], char fav[][10]) {
         }
         return -1;
 }
-/*without dp
+//without dp
 int ismonkeystr(char pi[], char fav[][10], int pos, int n) {
         printf("inside ismonkeystr\n");
         if (pos == (n-1))
@@ -54,7 +54,7 @@ int ismonkeystr(char pi[], char fav[][10], int pos, int n) {
         }
         return 0;
 }
-*/
+/*
 //yet to write with dp
 int ismonkeystr(char pi[], char fav[][10], int pos, int n) {
         printf("inside ismonkeystr\n");
@@ -72,10 +72,11 @@ int ismonkeystr(char pi[], char fav[][10], int pos, int n) {
         }
         return 0;
 }
+*/
 
 int main() {
         char pi[] = "12382598130";
-        char fav[][10] = {"12", "3825", "98130"};
+        char fav[][10] = {"121", "3825", "98130"};
         int n = sizeof(pi)/sizeof(pi[0]);
         printf("%s\n",pi);
         printstr(pi, n);
