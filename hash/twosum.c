@@ -25,7 +25,7 @@ int main () {
         int arr[] = {2,7,11,15};
         int *Sum, size;
 	int n = sizeof(arr)/sizeof(arr[0]);
-        Sum = twoSum(arr, n, 9, &size);
+        Sum = twoSum(arr, n, 10, &size);
         for (int i=0; i<2; i++) {
             printf("%d", Sum[i]);
         }

@@ -16,5 +16,6 @@ int main () {
         printf("2[arr]:%d\n", 2[arr]);//2[arr]:3
         printf("arr[1] - arr[4]:%d\n", arr[1] - arr[4]);//arr[1] - arr[4]:-3
         printf("two integers apart: i - j:%d\n", i-j);//two integers apart: i - j:2
+        printf("arr[-1]:%d", arr[-1]);//arr[-1]:0
         return 0;
 }

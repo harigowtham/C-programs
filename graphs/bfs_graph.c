@@ -137,7 +137,7 @@ int dequeue(struct queue* q){
         item = q->items[q->front];
         q->front++;
         if(q->front > q->rear){
-            printf("Resetting queue");
+            printf("Resetting queue\n");
             q->front = q->rear = -1;
         }
     }
@@ -148,9 +148,10 @@ void printQueue(struct queue *q) {
     if(isEmpty(q)) {
         printf("Queue is empty");
     } else {
-        printf("\nQueue contains \n");
+        printf("\nQueue contains:");
         for(i = q->front; i < q->rear + 1; i++) {
                 printf("%d ", q->items[i]);
         }
+        printf("\n");
     }
 }

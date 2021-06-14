@@ -85,15 +85,6 @@ void printmap() {
         return;
 }
 
-void create(struct Node *root) {
-        memset(map, -1, 100*sizeof(map[0]));
-//        memset(map->hvalue, -1, 10*sizeof(map[0].hvalue[0]));
-        memset(map->value, -1, 10*sizeof(map[0].value[0]));
-	int max = createFromBottom(root, map);
-        printf("the answer:\n");
-        print(map, max);
-}
-
 int createFromBottom(struct Node *root,struct Map *map) {
         if(root == NULL)
                 return 0;
@@ -101,7 +92,7 @@ int createFromBottom(struct Node *root,struct Map *map) {
         int r = createFromBottom(root->right, map)+1;
         int max = (l > r)? l: r;
         hash(max, root->data);
-        //printf("%d\n", max);
+        printf("max:%d, data:%d\n", max, root->data);
         return max;
 }
 
@@ -113,6 +104,15 @@ void print(struct Map *map, int max) {
                 }
                 printf("\n");
         }
+}
+
+void create(struct Node *root) {
+        memset(map, -1, 100*sizeof(map[0]));
+//        memset(map->hvalue, -1, 10*sizeof(map[0].hvalue[0]));
+        memset(map->value, -1, 10*sizeof(map[0].value[0]));
+	int max = createFromBottom(root, map);
+        printf("the answer:\n");
+        print(map, max);
 }
 
 int main()

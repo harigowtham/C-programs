@@ -1,6 +1,8 @@
 #include<stdio.h>
 
-void printarr(int arr[], int n) {
+//*arr works just the arr[] works
+//void printarr(int arr[], int n) {
+void printarr(int *arr, int n) {
         for (int i = 0; i<n; i++) {
                 printf("%d ", arr[i]);
         }

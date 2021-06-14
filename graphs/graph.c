@@ -67,6 +67,7 @@ void addEdge(struct Graph* graph, int src, int dest)
     newNode->next = graph->adjLists[src];
     graph->adjLists[src] = newNode;
 
+    // removing this will make it one directional
     // Add edge from dest to src
     newNode = createNode(src);
     newNode->next = graph->adjLists[dest];

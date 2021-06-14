@@ -39,7 +39,7 @@ void print2D(struct node *root)
 }
 
 struct node* newnode (int data) {
-        struct node *new = malloc(sizeof(struct node*));
+        struct node *new = malloc(sizeof(struct node));
         new->data = data;
         new->left = NULL;
         new->right = NULL;
@@ -72,22 +72,79 @@ struct node *invert (struct node *root){
                 root->right = invert(tmp);
                 return root;
         }
+        return root;
+}
+
+struct node *max_debug(struct node *root, int key){
+  if (root == NULL) {
+    printf("\nreturning null\n");
+    return NULL;
+  }
+
+  printf("\nAt node: %d\n", root->data);
+
+  if (key > root->data) {
+    printf("\ntaking right\n");
+    struct node *right =  max_debug(root->right, key);
+    if (right == NULL)
+      printf("\nreturning right as NULL\n");
+    else
+      printf("\nreturning right: %d\n", right->data);
+    return right;
+  } else {
+    printf("\ntaking left\n");
+    struct node *left = max_debug(root->left, key);
+    if(left == NULL) {
+      if (root == NULL)
+        printf("\nreturning root: NULL\n");
+      else
+        printf("\nreturning root: %d\n", root->data);
+      return root;
+    } else {
+      if (left == NULL)
+        printf("\nreturning left: NULL\n");
+      else
+        printf("\nreturning left: %d\n", left->data);
+      return left;
+    }
+  }
+}
+
+struct node *find(struct node *root, int key) {
+  if (root == NULL)
+    return root;
+  if (root->data == key)
+    return root;
+  if(key > root->data )
+    return find(root->right, key);
+  else
+    return find(root->left, key);
 }
 
 int main() {
         struct node *root = NULL;
-        root=insert(root, 5);
-        root=insert(root, 5);
-        root=insert(root, 3);
-        root=insert(root, 4);
-        root=insert(root, 7);
-        root=insert(root, 8);
+        root=insert(root, 50);
+        //root=insert(root, 5);
+        root=insert(root, 30);
+        root=insert(root, 40);
+        root=insert(root, 70);
+        root=insert(root, 80);
+        preorder(root);
+        printf("\nafter invert \n");
+         print2D(root);
+        //struct node * tmp = invert(root);
+        //printf("\nafter invert \n");
+        //print2D(tmp);
         preorder(root);
                 printf("\nafter invert \n");
-  print2D(root);
-        invert(root);
-                printf("\nafter invert \n");
-        preorder(root);
-                printf("\nafter invert \n");
-  print2D(root);
+        int m = 71;
+        printf("\ncal max_debug for: %d\n", m);
+        printf("max_debug from element:%d \n", max_debug(root, m)->data);
+        int f = 60;
+        printf("\ncal find for: %d\n", f);
+        struct node *find_node = find(root, f);
+        if (find_node == NULL)
+          printf("ele not found");
+        else
+          printf("element from find:%d \n", find_node->data);
 }
