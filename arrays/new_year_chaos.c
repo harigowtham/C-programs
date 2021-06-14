@@ -134,6 +134,7 @@ void minB(int q_count, int* q) {
         for(int i = 0; i < q_count; i++) {
                 // i-1 is because array starts at 0 while here its needed from 1
                 // check if its 2 more than swaps away, then call it chaotic
+                printf("%d\n", q[i-1]);
                 if (q[i-1] - (i) > 2) {
                         printf("Too chaotic\n");
                         return;
@@ -145,11 +146,10 @@ void minB(int q_count, int* q) {
                                 brb++;
                 }
         }
-        printf("%d\n",brb);
+        printf(" number of b:%d\n",brb);
 }
 
 int main() {
-        /*
         int n = 5;
         int *arr = (int *)malloc(sizeof(int)*n);
         arr[0]=2;
@@ -157,7 +157,7 @@ int main() {
         arr[2]=5;
         arr[3]=3;
         arr[4]=4;
-        */
+        /*
         int n = 8;
         int *arr = (int *)malloc(sizeof(int)*n);
         arr[0]=1;
@@ -168,6 +168,7 @@ int main() {
         arr[5]=8;
         arr[6]=6;
         arr[7]=4;
+        */
         printArray(arr, n);
         //minimumBribes(n, arr);
         minB(n, arr);

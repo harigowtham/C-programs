@@ -25,3 +25,44 @@ struct ListNode* reverseList(struct ListNode* head){
     }
     return tmp;
 }
+//replace the head's reference in place
+void rev(struct node **head) {
+  //struct node *tmp, *prev, *last = NULL; doesn't work
+  struct node *tmp = NULL;
+  struct node *prev = NULL;
+  struct node *last = NULL;
+
+  struct node *cur = *head;
+  if (cur == NULL) {
+    return;
+  }
+  if (cur->next == NULL) {
+    return;
+  }
+  while(cur != NULL && cur->next != NULL) {
+    if (cur->next->next == NULL) {
+      cur->next->next = cur;
+      last = cur->next;
+      cur->next = prev;
+      *head = last;
+      return;
+    }
+    tmp = cur->next->next;
+    cur->next->next = cur;
+    last = cur->next;
+    cur->next = prev;
+    cur = tmp;
+    prev = last;
+  }
+  /*
+  if (cur == NULL) {
+    *head = prev;
+    return;
+  }
+  */
+  if (cur->next == NULL) {
+    cur->next = prev;
+  }
+  *head = cur;
+  return;
+}

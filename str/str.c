@@ -1,5 +1,21 @@
 #include <string.h>
 #include<stdio.h>
+
+// both prints the same
+//aa	cb	bb	a1	b2
+void print(char **str, int r, int c) {
+  for (int i = 0; i < r; i++) {
+    for (int j = 0; j < c; j++) {
+      printf("%c", str[i][j]);
+    }
+    printf("\t");
+  }
+  //or this:
+  for (int i = 0; i < r; i++) {
+      printf("%s\t", str[i]);
+  }
+}
+
 int main() {
            char str[] = "I need coffee";
            //char ptr = "hari"; //char arry cant be used as a char
@@ -36,6 +52,8 @@ int main() {
    printf ("%u\n", (*ptr)+1);//72
    printf ("%s\n", *ptr);//seg fault
    printf ("%s\n", *ptr+1);
+   char *str[] = {"aa", "cb", "bb", "a1", "b2"};//aa	cb	bb	a1	b2
+  print(str, 5, 2);
         return 0;
 }
 

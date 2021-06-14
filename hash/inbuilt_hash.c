@@ -9,10 +9,10 @@ struct my_struct {
 };
 
 struct my_struct *users = NULL;
-
+//format (hash_table, key, input/outpu)
 void add_user(struct my_struct *s) {
     HASH_ADD_INT( users, id, s );
-    // users is the hash table
+    // users is the hash table which is create/initialised once for all this hash to work in line 11
     // id is the key
     // s is the pointer to the struct being added
     // malloc s, set the key and value and then send it

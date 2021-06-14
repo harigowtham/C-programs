@@ -41,6 +41,7 @@ int getMaxGold(int gold[MAX][MAX], int m, int n)
 	{
 		for (int row=0; row<m; row++)
 		{
+      printf("row:%d, col:%d \t", row, col);
 			// Gold collected on going to the cell on the right(->)
 			int right = (col==n-1)? 0: goldTable[row][col+1];
 
@@ -52,10 +53,12 @@ int getMaxGold(int gold[MAX][MAX], int m, int n)
 			int right_down = (row==m-1 || col==n-1)? 0:
 							goldTable[row+1][col+1];
 
+      printf("right:%d, ru:%d rd:%d \t", right, right_up, right_down);
 			// Max gold collected from taking either of the
 			// above 3 paths
 			goldTable[row][col] = gold[row][col] +
 							max(right, max(right_up, right_down));
+      printf("gold: %d  goldTable[%d][%d]: %d \n", gold[row][col], row, col, goldTable[row][col]);
 
 		}
 	}
